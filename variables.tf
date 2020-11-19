@@ -8,19 +8,19 @@ variable "namespace" {
 variable "druid_image_registry" {
   type        = string
   description = "Docker registry used to fetch the Apache Druid image"
-  default     = "davideberdin"
+  default     = "vidoomy"
 }
 
 variable "druid_image_repository" {
   type        = string
   description = "Docker image of Apache Druid compatible for this module"
-  default     = "apache-druid"
+  default     = "druid"
 }
 
 variable "druid_image_tag" {
   type        = string
   description = "Docker image tag"
-  default     = "0.18.1"
+  default     = "latest"
 }
 
 // Broker
@@ -390,26 +390,31 @@ variable "postgres_password" {
 variable "aws_access_key" {
   type        = string
   description = "AWS Access Key value. Permissions needed for S3"
+  default = "AKIA5TXOPNC3PC4HJUNU"
 }
 
 variable "aws_secret_key" {
   type        = string
   description = "AWS Secret Key value. Permissions needed for S3"
+  default = "fNjPNKp5dnxkw2xArCvOyRqFJsBsfKPuvBXYaRlE"
 }
 
 variable "aws_region" {
   type        = string
   description = "AWS region"
+  default = "eu-central-1"
 }
 
 variable "aws_bucket_storage" {
   type        = string
   description = "S3 bucket for storing the segments"
+  default = "druid-segments"
 }
 
 variable "aws_bucket_index" {
   type        = string
   description = "S3 bucket for storing the indexes"
+  default = "druid-indexes"
 }
 
 variable "broker_port" {
