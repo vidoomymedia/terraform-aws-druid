@@ -390,13 +390,11 @@ variable "postgres_password" {
 variable "aws_access_key" {
   type        = string
   description = "AWS Access Key value. Permissions needed for S3"
-  default = "AKIA5TXOPNC3PC4HJUNU"
 }
 
 variable "aws_secret_key" {
   type        = string
   description = "AWS Secret Key value. Permissions needed for S3"
-  default = "fNjPNKp5dnxkw2xArCvOyRqFJsBsfKPuvBXYaRlE"
 }
 
 variable "aws_region" {
@@ -408,13 +406,13 @@ variable "aws_region" {
 variable "aws_bucket_storage" {
   type        = string
   description = "S3 bucket for storing the segments"
-  default = "druid-segments"
+  default = "vidoomy-druid-segments"
 }
 
 variable "aws_bucket_index" {
   type        = string
   description = "S3 bucket for storing the indexes"
-  default = "druid-indexes"
+  default = "vidoomy-druid-indexes"
 }
 
 variable "broker_port" {

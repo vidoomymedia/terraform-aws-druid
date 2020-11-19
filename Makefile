@@ -80,6 +80,7 @@ run: check
 	-e CLUSTER_ID \
 	-p 8001:8001 \
 	--mount src=$(PWD),target=/var/infrastructure,type=bind \
+	--mount src=/home/diego/.ssh,target=/root/.ssh,type=bind \
 	--mount src=/var/run/docker.sock,target=/var/run/docker.sock,type=bind \
 	${ORG}/${REPO}:${VERSION} /bin/sh --login
 
